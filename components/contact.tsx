@@ -7,7 +7,7 @@ import { useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Mail, Phone, Send, CheckCircle } from "lucide-react";
+import { MapPin, Mail, Phone, Send, CheckCircle, Linkedin } from "lucide-react";
 
 export default function Contact() {
   const ref = useRef(null);
@@ -35,17 +35,17 @@ export default function Contact() {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Location",
-      details: "New York, NY, USA",
+      details: "Denpasar, Indonesia",
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      details: "john@example.com",
+      details: "sachas4f@gmail.com  ",
     },
     {
-      icon: <Phone className="h-6 w-6" />,
-      title: "Phone",
-      details: "+1 (555) 123-4567",
+      icon: <Linkedin className="h-6 w-6" />,
+      title: "LinkedIn",
+      details: "Sacha Ahsan",
     },
   ];
 
@@ -55,18 +55,10 @@ export default function Contact() {
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 relative">
             Contact Me
-            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-primary mt-2"></span>
+            <span className="absolute top-8 left-1/2 -translate-x-1/2 w-36 h-1 bg-primary mt-2"></span>
           </h2>
 
-          <div
-            ref={ref}
-            className="grid md:grid-cols-2 gap-10"
-            style={{
-              opacity: isInView ? 1 : 0,
-              transform: isInView ? "none" : "translateY(50px)",
-              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
-            }}
-          >
+          <div className="grid md:grid-cols-2 gap-10">
             <div>
               <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
               <p className="text-foreground/70 mb-8">

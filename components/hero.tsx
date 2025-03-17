@@ -21,8 +21,8 @@ export default function Hero() {
       </div>
 
       <div className="flex-1 container flex flex-col justify-center items-start pt-20">
-        <div className="max-w-3xl space-y-6 animate-in slide-in-from-left duration-700">
-          <h2 className="text-xl md:text-2xl text-primary font-medium">
+        <div className="max-w-3xl space-y-6 ">
+          <h2 className="text-xl md:text-2xl text-primary font-medium ml-1">
             Hello, I'm
           </h2>
           <h1 className="text-4xl md:text-6xl font-bold">
@@ -30,7 +30,7 @@ export default function Hero() {
           </h1>
           <div className="h-8 md:h-12">
             <h2 className="text-2xl md:text-4xl text-foreground/80 font-medium">
-              Fullstack Developer
+              Frontend Developer
               <span className="animate-blink">|</span>
             </h2>
           </div>
@@ -59,24 +59,30 @@ export default function Hero() {
               size="icon"
               className="rounded-full hover:text-primary hover:scale-110 transition-all"
             >
-              <Github className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
+              <a href="https://github.com/Sikoo54" target="_blank">
+                <Github className="h-5 w-5" />
+                <span className="sr-only">GitHub</span>
+              </a>
             </Button>
             <Button
               variant="ghost"
               size="icon"
               className="rounded-full hover:text-primary hover:scale-110 transition-all"
             >
-              <Linkedin className="h-5 w-5" />
-              <span className="sr-only">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/sacha-ahsan" target="_blank">
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
             </Button>
             <Button
               variant="ghost"
               size="icon"
               className="rounded-full hover:text-primary hover:scale-110 transition-all"
             >
-              <Mail className="h-5 w-5" />
-              <span className="sr-only">Email</span>
+              <a href="mailto:sachas4f@gmail.com">
+                <Mail className="h-5 w-5" />
+                <span className="sr-only">Email</span>
+              </a>
             </Button>
           </div>
         </div>

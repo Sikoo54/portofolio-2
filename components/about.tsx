@@ -16,18 +16,10 @@ export default function About() {
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 relative">
           About Me
-          <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-primary mt-2"></span>
+          <span className="absolute top-8 left-1/2 -translate-x-1/2 w-36 h-1 bg-primary mt-2"></span>
         </h2>
 
-        <div
-          ref={ref}
-          className="grid md:grid-cols-2 gap-10 items-center"
-          style={{
-            opacity: isInView ? 1 : 0,
-            transform: isInView ? "none" : "translateY(50px)",
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
-          }}
-        >
+        <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="relative rounded-lg overflow-hidden border-4 border-primary/20 shadow-xl transform hover:scale-105 transition-transform duration-500">
             <Image
               src="/images/me.jpg"
@@ -40,7 +32,7 @@ export default function About() {
 
           <div className="space-y-6">
             <h3 className="text-2xl font-bold">
-              I'm <span className="text-primary">Sacha Ahsan</span>, Fullstack
+              I'm <span className="text-primary">Sacha Ahsan</span>, Frontend
               Developer
             </h3>
             <p className="text-foreground/70">
@@ -76,7 +68,7 @@ export default function About() {
             <a href="/assets/Resume.pdf" download>
               <Button className="mt-6 group">
                 Download CV
-                <FileText className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+                <FileText className="ml-1 h-4 w-4 " />
               </Button>
             </a>
           </div>

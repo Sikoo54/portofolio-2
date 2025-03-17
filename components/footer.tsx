@@ -20,30 +20,36 @@ export default function Footer() {
               size="icon"
               className="rounded-full hover:text-primary hover:bg-primary/10 transition-colors"
             >
-              <Github className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
+              <a href="https://github.com/Sikoo54" target="_blank">
+                <Github className="h-5 w-5" />
+                <span className="sr-only">GitHub</span>
+              </a>
             </Button>
             <Button
               variant="ghost"
               size="icon"
               className="rounded-full hover:text-primary hover:bg-primary/10 transition-colors"
             >
-              <Linkedin className="h-5 w-5" />
-              <span className="sr-only">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/sacha-ahsan" target="_blank">
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
             </Button>
             <Button
               variant="ghost"
               size="icon"
               className="rounded-full hover:text-primary hover:bg-primary/10 transition-colors"
             >
-              <Mail className="h-5 w-5" />
-              <span className="sr-only">Email</span>
+              <a href="mailto:sachas4f@gmail.com">
+                <Mail className="h-5 w-5" />
+                <span className="sr-only">Email</span>
+              </a>
             </Button>
           </div>
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-foreground/60">
-          <p>© {currentYear} John Doe. All rights reserved.</p>
+          <p>© {currentYear} Sacha Ahsan. All rights reserved.</p>
         </div>
       </div>
     </footer>

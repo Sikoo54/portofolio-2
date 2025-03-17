@@ -15,65 +15,58 @@ export default function Projects() {
       title: "LalapLah!",
       description:
         "A full-featured e-commerce platform with product management, cart functionality, and payment integration.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+      image: "/images/lalaplah.png?height=600&width=800",
+      tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
       liveUrl: "https://lalaplah.vercel.app/",
       githubUrl: "#",
     },
-    {
-      title: "Task Management App",
-      description:
-        "A collaborative task management application with real-time updates and team collaboration features.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["React", "Firebase", "Material UI", "Redux"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Portfolio Website",
-      description:
-        "A modern portfolio website with smooth animations and responsive design.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Weather Dashboard",
-      description:
-        "A weather dashboard that displays current and forecasted weather data for multiple locations.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["React", "OpenWeather API", "Chart.js", "Styled Components"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
+    // {
+    //   title: "Task Management App",
+    //   description:
+    //     "A collaborative task management application with real-time updates and team collaboration features.",
+    //   image: "/placeholder.svg?height=600&width=800",
+    //   tags: ["React", "Firebase", "Material UI", "Redux"],
+    //   liveUrl: "#",
+    //   githubUrl: "#",
+    // },
+    // {
+    //   title: "Portfolio Website",
+    //   description:
+    //     "A modern portfolio website with smooth animations and responsive design.",
+    //   image: "/placeholder.svg?height=600&width=800",
+    //   tags: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
+    //   liveUrl: "#",
+    //   githubUrl: "#",
+    // },
+    // {
+    //   title: "Weather Dashboard",
+    //   description:
+    //     "A weather dashboard that displays current and forecasted weather data for multiple locations.",
+    //   image: "/placeholder.svg?height=600&width=800",
+    //   tags: ["React", "OpenWeather API", "Chart.js", "Styled Components"],
+    //   liveUrl: "#",
+    //   githubUrl: "#",
+    // },
   ];
 
   return (
     <section id="projects" className="py-20 bg-muted/30 min-h-screen">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 relative">
-          My Projects
-          <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-primary mt-2"></span>
+          Projects
+          <span className="absolute top-9 left-1/2 -translate-x-1/2 w-36 h-1 bg-primary mt-2"></span>
         </h2>
 
-        <div ref={ref} className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
               className="bg-card rounded-lg overflow-hidden shadow-lg border border-border group hover:shadow-primary/20 transition-all duration-500 "
-              style={{
-                opacity: isInView ? 1 : 0,
-                transform: isInView ? "none" : "translateY(50px)",
-                transition: `all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) ${
-                  0.1 + index * 0.1
-                }s`,
-              }}
             >
               <div className="grid md:grid-cols-2 gap-6 ">
                 <div className="relative overflow-hidden h-64 md:h-full">
                   <Image
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image}
                     alt={project.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
