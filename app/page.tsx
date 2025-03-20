@@ -4,13 +4,16 @@ import Skills from "@/components/skills";
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
-import AudioPlayer from "@/components/AudioPLayer";
+import ScrollVelocity from "./components/ScrollVelocity/ScrollVelocity";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <AudioPlayer />
       <Hero />
+      <ScrollVelocity
+        texts={["| SACHA AHSAN", "| FRONTEND DEVELOPER"]}
+        className="custom-scroll-text"
+      />
       <About />
       <Skills />
       <Projects />

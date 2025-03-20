@@ -5,10 +5,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Iridescence from "@/app/components/Iridescence/Iridescence";
+import ScrollVelocity from "@/app/components/ScrollVelocity/ScrollVelocity";
 
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex flex-col relative">
+    <section
+      id="home"
+      className="min-h-screen flex flex-col relative mb-16 md:mb-32"
+    >
       <Navbar />
 
       <div className="fixed top-0 left-0 bottom-0 right-0 w-full h-full -z-10 ">
@@ -88,7 +92,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className=" absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce ">
         <Button variant="ghost" size="icon" asChild>
           <a href="#about" aria-label="Scroll down">
             <ArrowDown className="h-6 w-6" />

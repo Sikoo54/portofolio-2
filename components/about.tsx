@@ -12,7 +12,10 @@ export default function About() {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section id="about" className="py-20 bg-muted/30 min-h-screen">
+    <section
+      id="about"
+      className="py-20 bg-muted/30 min-h-screen mt-16 md:mt-32"
+    >
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 relative">
           About Me
