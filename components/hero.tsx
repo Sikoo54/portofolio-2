@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col relative mb-16 md:mb-32"
+      className="min-h-screen flex flex-col relative mb-16 md:mb-28"
     >
       <Navbar />
 

@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
       <ScrollVelocity
         texts={["| SACHA AHSAN", "| FRONTEND DEVELOPER"]}
-        className="custom-scroll-text"
+        className="custom-scroll-text text-2xl md:text-7xl py-1"
       />
       <About />
       <Skills />

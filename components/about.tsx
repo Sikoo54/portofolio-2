@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 import { useInView } from "framer-motion";
-import ScrollVelocity from "@/app/components/ScrollVelocity/ScrollVelocity";
+import { motion } from "framer-motion";
 
 export default function About() {
   const ref = useRef(null);
@@ -16,7 +16,12 @@ export default function About() {
       id="about"
       className="py-20 bg-muted/30 min-h-screen mt-16 md:mt-32"
     >
-      <div className="container">
+      <motion.div
+        className="container"
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      >
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 relative">
           About Me
           <span className="absolute top-8 left-1/2 -translate-x-1/2 w-36 h-1 bg-primary mt-2"></span>
@@ -76,7 +81,7 @@ export default function About() {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
