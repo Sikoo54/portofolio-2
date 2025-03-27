@@ -12,10 +12,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section
-      id="about"
-      className="py-20 bg-muted/30 min-h-screen mt-16 md:mt-32"
-    >
+    <section id="about" className="py-20 min-h-screen mt-2 md:mt-6">
       <motion.div
         className="container"
         initial={{ opacity: 0, scale: 0.8 }}

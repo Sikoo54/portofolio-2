@@ -59,7 +59,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 min-h-screen">
+    <section id="skills" className="py-20 min-h-screen md:mt-6">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 relative">
           Skills

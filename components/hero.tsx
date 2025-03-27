@@ -9,10 +9,7 @@ import ScrollVelocity from "@/app/components/ScrollVelocity/ScrollVelocity";
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className="min-h-screen flex flex-col relative mb-16 md:mb-28"
-    >
+    <section id="home" className="min-h-screen flex flex-col relative ">
       <Navbar />
 
       <div className="fixed top-0 left-0 bottom-0 right-0 w-full h-full -z-10 ">

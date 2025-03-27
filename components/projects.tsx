@@ -50,7 +50,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-muted/30 min-h-screen">
+    <section id="projects" className="py-20  min-h-screen">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 relative">
           Projects

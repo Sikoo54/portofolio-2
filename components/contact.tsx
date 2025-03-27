@@ -50,12 +50,12 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className=" ">
-      <div className="mt-20 mb-24 ">
+    <section id="contact" className="bg-muted/30 py-12  ">
+      <div className="mb-28">
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 relative">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-24 relative">
             Contact Me
-            <span className="absolute top-8 left-1/2 -translate-x-1/2 w-36 h-1 bg-primary mt-2"></span>
+            <span className="absolute top-8 left-1/2 -translate-x-1/2 w-44 h-1 bg-primary mt-2"></span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-10">
