@@ -14,7 +14,7 @@ export default function Projects() {
     {
       title: "LalapLah!",
       description:
-        "A full-featured e-commerce platform with product management, cart functionality, and payment integration.",
+        "A simple website showcasing the menu, prices, and details of a Lalapan food stall. Users can browse the available dishes, check the location and opening hours, and place orders through direct links to Gojek, Grab, or WhatsApp.",
       image: "/images/lalaplah.png?height=600&width=800",
       tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
       liveUrl: "https://lalaplah.vercel.app/",
