@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FileText } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
@@ -23,6 +24,7 @@ export default function Navbar() {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
+    { name: "Certificates", href: "#certificates" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -38,13 +40,13 @@ export default function Navbar() {
       <div className="container flex items-center justify-between">
         <Link
           href="#home"
-          className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent transition-all duration-300 hover:scale-105"
+          className="text-2xl font-bold text-transparent transition-all duration-300 bg-gradient-to-r from-primary to-purple-600 bg-clip-text hover:scale-105"
         >
           Portfolio
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="items-center hidden gap-6 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -54,7 +56,9 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Button>Resume</Button>
+          <a href="/assets/Resume.pdf" download>
+            <Button>Resume</Button>
+          </a>
         </nav>
 
         {/* Mobile Navigation Toggle */}
@@ -68,19 +72,21 @@ export default function Navbar() {
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-md shadow-md py-4 animate-in slide-in-from-top duration-300">
+          <div className="absolute left-0 w-full py-4 duration-300 shadow-md md:hidden top-full bg-background/95 backdrop-blur-md animate-in slide-in-from-top">
             <nav className="flex flex-col items-center gap-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-foreground/80 hover:text-primary transition-colors py-2"
+                  className="py-2 transition-colors text-foreground/80 hover:text-primary"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </Link>
               ))}
-              <Button className="mt-2">Resume</Button>
+              <a href="/assets/Resume.pdf" download>
+                <Button>Resume</Button>
+              </a>
             </nav>
           </div>
         )}

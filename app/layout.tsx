@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Sacha Ahsan | Portfolio",
   description:
     "Personal portofolio website of Sacha Ahsan, a Fullstack Developer.",
-  icons: "/images/avatar.ico",
+  icons: "/images/anime.ico",
 };
 
 export default function RootLayout({

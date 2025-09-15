@@ -4,7 +4,7 @@ import Skills from "@/components/skills";
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
-import ScrollVelocity from "./components/ScrollVelocity/ScrollVelocity";
+import Certificates from "@/components/certificates";
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
+      <Certificates />
       <Contact />
       <Footer />
     </main>

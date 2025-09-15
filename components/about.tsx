@@ -12,20 +12,20 @@ export default function About() {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section id="about" className="py-20 min-h-screen mt-2 md:mt-6">
+    <section id="about" className="min-h-screen py-20 mt-2 md:mt-6">
       <motion.div
         className="container"
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 relative">
+        <h2 className="relative mb-16 text-3xl font-bold text-center md:text-4xl">
           About Me
-          <span className="absolute top-8 left-1/2 -translate-x-1/2 w-36 h-1 bg-primary mt-2"></span>
+          <span className="absolute h-1 mt-2 -translate-x-1/2 top-8 left-1/2 w-36 bg-primary"></span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="relative rounded-lg overflow-hidden border-4 border-primary/20 shadow-xl transform hover:scale-105 transition-transform duration-500">
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          <div className="relative overflow-hidden transition-transform duration-500 transform border-4 rounded-lg shadow-xl border-primary/20 hover:scale-105">
             <Image
               src="/images/me.jpg"
               alt="My Image"
@@ -37,7 +37,7 @@ export default function About() {
 
           <div className="space-y-6">
             <h3 className="text-2xl font-bold">
-              I'm <span className="text-primary">Sacha Ahsan</span>, Frontend
+              I'm <span className="text-primary">Sacha Ahsan</span>, Fullstack
               Developer
             </h3>
             <p className="text-foreground/70">
@@ -73,7 +73,7 @@ export default function About() {
             <a href="/assets/Resume.pdf" download>
               <Button className="mt-6 group">
                 Download CV
-                <FileText className="ml-1 h-4 w-4 " />
+                <FileText className="w-4 h-4 ml-1 " />
               </Button>
             </a>
           </div>

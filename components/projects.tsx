@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const ref = useRef(null);
@@ -12,23 +13,30 @@ export default function Projects() {
 
   const projects = [
     {
+      title: "Serenité Cafe",
+      description:
+        "Full-stack cafe management system built with Next.js, React, Tailwind CSS, Supabase, and shadcn/ui. featuring authentication, real-time Cafe management, and payment integration.",
+      image: "/images/serenite-web2.png?height=600&width=800",
+      tags: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Supabase",
+        "Shadcn/ui",
+      ],
+      liveUrl: "https://serenite-cafe.vercel.app/",
+      githubUrl: "https://github.com/Sikoo54/realtime-point-of-sales",
+    },
+    {
       title: "LalapLah!",
       description:
         "A simple website showcasing the menu, prices, and details of a Lalapan food stall. Users can browse the available dishes, check the location and opening hours, and place orders through direct links to Gojek, Grab, or WhatsApp.",
       image: "/images/lalaplah.png?height=600&width=800",
       tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
       liveUrl: "https://lalaplah.vercel.app/",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Sikoo54/lalaplah-website",
     },
-    // {
-    //   title: "Task Management App",
-    //   description:
-    //     "A collaborative task management application with real-time updates and team collaboration features.",
-    //   image: "/placeholder.svg?height=600&width=800",
-    //   tags: ["React", "Firebase", "Material UI", "Redux"],
-    //   liveUrl: "#",
-    //   githubUrl: "#",
-    // },
     // {
     //   title: "Portfolio Website",
     //   description:
@@ -50,35 +58,40 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20  min-h-screen">
-      <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 relative">
+    <section id="projects" className="min-h-screen py-20">
+      <motion.div
+        className="container"
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      >
+        <h2 className="relative mb-16 text-3xl font-bold text-center md:text-4xl">
           Projects
-          <span className="absolute top-9 left-1/2 -translate-x-1/2 w-36 h-1 bg-primary mt-2"></span>
+          <span className="absolute h-1 mt-2 -translate-x-1/2 top-9 left-1/2 w-36 bg-primary"></span>
         </h2>
 
         <div className="grid grid-cols-1 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-card rounded-lg overflow-hidden shadow-lg border border-border group hover:shadow-primary/20 transition-all duration-500 "
+              className="overflow-hidden transition-all duration-500 border rounded-lg shadow-lg bg-card border-border group hover:shadow-primary/20 "
             >
-              <div className="grid md:grid-cols-2 gap-6 ">
-                <div className="relative overflow-hidden h-64 md:h-full">
+              <div className="grid gap-6 md:grid-cols-2 ">
+                <div className="relative h-64 overflow-hidden md:h-full">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-4">
+                  <div className="absolute inset-0 flex items-center justify-center gap-4 transition-opacity duration-300 opacity-0 bg-primary/80 group-hover:opacity-90">
                     <Button size="icon" variant="secondary" asChild>
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Github className="h-5 w-5" />
+                        <Github className="w-5 h-5" />
                         <span className="sr-only">GitHub Repository</span>
                       </a>
                     </Button>
@@ -88,24 +101,24 @@ export default function Projects() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <ExternalLink className="h-5 w-5" />
+                        <ExternalLink className="w-5 h-5" />
                         <span className="sr-only">Live Demo</span>
                       </a>
                     </Button>
                   </div>
                 </div>
-                <div className="p-6 flex flex-col justify-center min-h-72">
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                <div className="flex flex-col justify-center p-6 min-h-72">
+                  <h3 className="mb-2 text-xl font-bold transition-colors group-hover:text-primary">
                     {project.title}
                   </h3>
-                  <p className="text-foreground/70 mb-4">
+                  <p className="mb-4 text-foreground/70">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full"
+                        className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary"
                       >
                         {tag}
                       </span>
@@ -116,7 +129,7 @@ export default function Projects() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

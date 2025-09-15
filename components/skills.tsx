@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { Code, Database, Layout, Palette, Server } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Skills() {
   const ref = useRef(null);
@@ -10,7 +11,7 @@ export default function Skills() {
 
   const skills = [
     {
-      icon: <Layout className="h-10 w-10" />,
+      icon: <Layout className="w-10 h-10" />,
       title: "Frontend Development",
       description:
         "Creating responsive and interactive user interfaces with modern frameworks.",
@@ -26,32 +27,32 @@ export default function Skills() {
     },
 
     {
-      icon: <Palette className="h-10 w-10" />,
+      icon: <Palette className="w-10 h-10" />,
       title: "UI/UX Design",
       description: "Designing beautiful and intuitive user experiences.",
       technologies: ["Figma", "Tailwind CSS", "ShadCN", "ReactBits"],
     },
     {
-      icon: <Code className="h-10 w-10" />,
+      icon: <Code className="w-10 h-10" />,
       title: "Web Animation",
       description:
         "Creating engaging and interactive animations for web interfaces.",
       technologies: ["GSAP", "Framer Motion", "Lenis"],
     },
     {
-      icon: <Server className="h-10 w-10" />,
+      icon: <Server className="w-10 h-10" />,
       title: "Backend Development",
       description: "Building robust server-side applications and APIs.",
-      technologies: ["Node.js", "REST API"],
+      technologies: ["Node.js", "REST API", "PostgreSQL"],
     },
     {
-      icon: <Database className="h-10 w-10" />,
+      icon: <Database className="w-10 h-10" />,
       title: "Database Management",
       description: "Designing and optimizing database structures.",
-      technologies: ["MySQL", "Firebase"],
+      technologies: ["MySQL", "Supabase", "Firebase"],
     },
     {
-      icon: <Layout className="h-10 w-10" />,
+      icon: <Layout className="w-10 h-10" />,
       title: "Deployment & DevOps",
       description: "Building inclusive websites that work for everyone.",
       technologies: ["Git", "GitHub", "Vercel", "Netlify"],
@@ -59,27 +60,32 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 min-h-screen md:mt-6">
-      <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 relative">
+    <section id="skills" className="min-h-screen py-20 md:mt-6">
+      <motion.div
+        className="container"
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      >
+        <h2 className="relative mb-16 text-3xl font-bold text-center md:text-4xl">
           Skills
-          <span className="absolute top-9 left-1/2 -translate-x-1/2 w-24 h-1 bg-primary mt-2"></span>
+          <span className="absolute w-24 h-1 mt-2 -translate-x-1/2 top-9 left-1/2 bg-primary"></span>
         </h2>
 
-        <div ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={ref} className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="bg-card rounded-lg p-6 shadow-lg border border-border "
+              className="p-6 border rounded-lg shadow-lg bg-card border-border "
             >
-              <div className="text-primary mb-4">{skill.icon}</div>
-              <h3 className="text-xl font-bold mb-3">{skill.title}</h3>
-              <p className="text-foreground/70 mb-4">{skill.description}</p>
+              <div className="mb-4 text-primary">{skill.icon}</div>
+              <h3 className="mb-3 text-xl font-bold">{skill.title}</h3>
+              <p className="mb-4 text-foreground/70">{skill.description}</p>
               <div className="flex flex-wrap gap-2 mt-4">
                 {skill.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full"
+                    className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary"
                   >
                     {tech}
                   </span>
@@ -88,7 +94,7 @@ export default function Skills() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
