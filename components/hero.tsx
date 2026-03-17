@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Youtube } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Iridescence from "@/app/components/Iridescence/Iridescence";
 import ScrollVelocity from "@/app/components/ScrollVelocity/ScrollVelocity";
@@ -80,6 +80,16 @@ export default function Hero() {
               size="icon"
               className="transition-all rounded-full hover:text-primary hover:scale-110"
             >
+              <a href="https://www.youtube.com/@siko.54" target="_blank">
+                <Youtube className="w-5 h-5" />
+                <span className="sr-only">Youtube</span>
+              </a>
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="transition-all rounded-full hover:text-primary hover:scale-110"
+            >
               <a href="mailto:sachas4f@gmail.com">
                 <Mail className="w-5 h-5" />
                 <span className="sr-only">Email</span>
@@ -89,7 +99,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute -translate-x-1/2  bottom-10 left-1/2 animate-bounce">
+      <div className="absolute -translate-x-1/2 bottom-10 left-1/2 animate-bounce">
         <Button variant="ghost" size="icon" asChild>
           <a href="#about" aria-label="Scroll down">
             <ArrowDown className="w-6 h-6" />
